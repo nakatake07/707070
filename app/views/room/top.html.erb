@@ -1,0 +1,21 @@
+
+
+  <!--main用のdiv -->
+
+<div class="main">
+	<div class="container">
+  <% if flash[:notice] %>
+  <%= flash[:notice] %>
+  <%elsif flash[:alert]%>
+  <%= flash[:alert] %>
+  <%end%>
+  <p><h1>welcome to Bookers !!</h1></p>
+
+  <p>In Bookers,</p>
+
+
+  <p>you can share and exchange your opinions , inpressions , and emotions</p>
+  <p>about varioius books!</p>
+  <p><%= link_to "Log in", new_user_session_path,class: "btn btn-primary btn-lg" %></p>
+  <p><%= link_to "Sign up", new_user_registration_path,class: "btn btn-primary btn-lg" %></p>
+</div>

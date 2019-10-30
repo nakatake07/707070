@@ -1,0 +1,56 @@
+<% if @user.errors.any? %>
+          <div id="error_explanation" class="alert alert-danger">
+          	<p><%= @user.errors.count %>errors prohibited this obj from being saved</p>
+           <ul>
+              <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+           </ul>
+          </div>
+<% end %>
+
+
+
+
+<div class="container">
+
+	<p></p>
+	<h2>User info</h2>
+
+   <%= form_for(@user) do |f| %>
+
+	 <div class="field">
+	 	<label for="user_name">Name</label>
+	 	<%= f.text_field :name %>
+    </div>
+
+
+	 <!-- 画像領域 -->
+	 <div class="field">
+	 	<label for="rofile_image">Image</label>
+	 	<%= f.attachment_field :profile_image %>
+
+
+	 </div>
+
+
+
+	 <!-- インフォメーション -->
+	 <div class="field">
+	 	<label for="introduction">introduction</label>
+	 	<%= f.text_area :introduction %>
+
+
+
+	 </div>
+
+
+
+	 <!-- アクション -->
+	 <div class="actions">
+	 	<%= f.submit "update User" %>
+	 	<!-- <input type="submit" name="commit" value="update User" date-disable-with="update User"> -->
+	 </div>
+	</form>
+   </div>
+<% end %>
