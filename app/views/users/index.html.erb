@@ -1,7 +1,7 @@
 <div class="contaiber">
 	 <div class="row">
 	 	<%= render 'books/list', user: @user, book: @book %>
-  
+
 
   <div class="col-xs-9" style="background-color: pink;">
   	<h2>Books</h2>
@@ -18,7 +18,7 @@
       <tbody>
         <tr>
        <% @users.each do |user| %>
-      
+
          <td> <%= attachment_image_tag user,:profile_image,:fill,50,50,fallback: "no_image.jpg" %>
          </td>
         <td>
@@ -27,15 +27,12 @@
         <td>
           	<%= link_to "show", user_path(user.id) %>
         </td>
-      
-       
      </tr>
 
 
      </tbody>
      <% end %>
-     
-  
+
     </table>
    </div>
   </div>

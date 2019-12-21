@@ -22,11 +22,12 @@
 						<th></th>
 						<th>title</th>
 						<th>Opinion</th>
+						<th>kenn</th>
 					</tr>
 				</thead>
 				<tbody>
        				<% @books.each do |book| %>
-		        		
+
 					        <td>
 					        	<%= attachment_image_tag book.user,:profile_image,:fill,60,60,fallback: "no_image.jpg" %>
 					        </td>
@@ -36,7 +37,7 @@
 					        <td>
 					           <%= book.body %>
 					        </td>
-		      			
+
 
 		       </tbody>
 		       <% end %>
